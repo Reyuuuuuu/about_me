@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <link rel="icon" type="image/x-icon" href="assets/favico.ico" />
-    <link href="dist/output.css" rel="stylesheet" />
+    <title>About Me</title>
+    <link href="../dist/output.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="../assets/favico.ico" />
   </head>
   <body class="bg-gray-100 text-gray-900">
     <nav class="bg-white shadow-lg">
@@ -14,7 +14,7 @@
           <div class="flex items-center">
             <img
               class="w-12 h-12 rounded-full"
-              src="assets/wallpaper/ml.jpg"
+              src="../assets/wallpaper/ml.jpg"
               alt="logo"
             />
             <div class="pl-4 text-md font-bold">Reuben</div>
@@ -22,7 +22,7 @@
 
           <div class="hidden md:flex space-x-6">
             <a href="/" class="text-gray-800 hover:text-blue-500">Home</a>
-            <a href="pages/about.html" class="text-gray-800 hover:text-blue-500"
+            <a href="about.html" class="text-gray-800 hover:text-blue-500"
               >About Me</a
             >
             <a href="/hobbies" class="text-gray-800 hover:text-blue-500"
@@ -76,54 +76,52 @@
       </div>
     </nav>
 
-    <div
-      class="min-h-screen flex items-center justify-center"
-      style="
-        background-image: url('assets/wallpaper/bg.jpg');
-        background-size: cover;
-        background-position: center;
-      "
-    >
-      <div class="container mx-auto">
-        <div class="flex justify-center">
-          <button
-            id="playButton"
-            class="mt-4 p-2 bg-blue-400 text-white rounded"
-          >
-            Click Me
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <audio id="welcomeAudio" src="assets/music/welcome-ml.mp3"></audio>
-
-    <div
-      id="modal"
-      class="fixed inset-0 hidden bg-gray-800 bg-opacity-50 flex justify-center items-center"
-    >
-      <div
-        class="relative bg-white rounded-lg shadow-lg p-6 flex flex-col items-center"
-      >
+    <div class="container mx-auto mt-6 p-6 opacity-0 animate-fade-in">
+      <!-- Centered Image -->
+      <div class="flex justify-center mb-8">
         <img
-          id="modalImage"
-          src="assets/reu/modal.jpg"
-          class="transform scale-50 opacity-0 transition-transform transition-opacity duration-300 rounded-full w-48 h-48 object-cover"
-          alt="Modal Image"
+          src="../assets/reu/me.jpg"
+          alt="Profile Image"
+          class="w-32 h-32 rounded-full object-cover shadow-lg"
         />
+      </div>
 
-        <div class="mt-4 text-center">
-          <h2 class="text-xl font-bold text-gray-800">Welcome, Gamer!</h2>
-          <p class="text-gray-600 mt-2">
-            Hello fellow gamers, My name is Joe, just a typical gamer. I spend
-            my time exploring new strategies in games, diving into the latest
-            updates, and connecting with friends online.
+      <!-- Biodata Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <!-- Row 1 -->
+        <div class="bg-white p-4 shadow rounded-lg">
+          <h2 class="text-lg font-semibold text-gray-700">Full Name:</h2>
+          <p class="text-gray-600 mt-1">Joe Gamer</p>
+        </div>
+        <div class="bg-white p-4 shadow rounded-lg">
+          <h2 class="text-lg font-semibold text-gray-700">Age:</h2>
+          <p class="text-gray-600 mt-1">29</p>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="bg-white p-4 shadow rounded-lg">
+          <h2 class="text-lg font-semibold text-gray-700">Occupation:</h2>
+          <p class="text-gray-600 mt-1">Professional Gamer</p>
+        </div>
+        <div class="bg-white p-4 shadow rounded-lg">
+          <h2 class="text-lg font-semibold text-gray-700">Location:</h2>
+          <p class="text-gray-600 mt-1">New York, USA</p>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="bg-white p-4 shadow rounded-lg">
+          <h2 class="text-lg font-semibold text-gray-700">Favorite Game:</h2>
+          <p class="text-gray-600 mt-1">League of Legends</p>
+        </div>
+        <div class="bg-white p-4 shadow rounded-lg">
+          <h2 class="text-lg font-semibold text-gray-700">Hobbies:</h2>
+          <p class="text-gray-600 mt-1">
+            Streaming, Exploring Strategies, Collaborating with Friends
           </p>
         </div>
       </div>
     </div>
 
-    <script src="js/welcome.js"></script>
-    <script src="js/nav.js"></script>
+    <script src="../js/nav.js"></script>
   </body>
 </html>
